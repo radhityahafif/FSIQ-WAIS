@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Reasoning Index</title>
+    <link rel="stylesheet" href="assets/css/tictactoe.css">
+    <style>
+        /* Additional styles */
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 50px; /* footer height */
+        }
+        .back-to-index {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #007bff;
+          color: white;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+        }
+        .back-to-index:hover {
+          background-color: #0056b3;
+        }
+      </style>
+</head>
+
+<body>
+    <h1>Tik Tac Toe Game</h1>
+    <div class="container">
+        <div data-index="0" class="box"></div>
+        <div data-index="1" class="box"></div>
+        <div data-index="2" class="box"></div>
+        <div data-index="3" class="box"></div>
+        <div data-index="4" class="box"></div>
+        <div data-index="5" class="box"></div>
+        <div data-index="6" class="box"></div>
+        <div data-index="7" class="box"></div>
+        <div data-index="8" class="box"></div>
+    </div>
+    <div class="status"></div>
+  <button class="restartBtn">Restart 🔁</button>
+
+  <a href="index.html" class="back-to-index">Kembali ke Halaman Utama</a>
+
+    <script src="assets/js/tictactoe.js"></script>
+</body>
+
+</html>
