@@ -69,7 +69,7 @@ function restartGame(){
     running=true;
     statusEl.textContent=`Now "${player}" Turn`;
     statusEl.style.color = "black"
-    restartBtnEl.textContent = "Restart ðŸ”"
+    restartBtnEl.textContent = "Restart ?"
   
     boxEls.forEach(box=>{
         box.innerHTML="";
@@ -100,7 +100,7 @@ function checkWinner(){
 
     // if win then this will execute. 
   if(isWon){
-    statusEl.textContent=`Congratulation...! "${player}" Won the game!;
+    statusEl.textContent=`Congratulation...! "${player}" Won the game!`;
     statusEl.style.color = "green"
     restartBtnEl.textContent = "Play Again ?"
     running=false;
