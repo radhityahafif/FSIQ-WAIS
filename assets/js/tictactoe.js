@@ -100,15 +100,15 @@ function checkWinner(){
 
     // if win then this will execute. 
   if(isWon){
-    statusEl.textContent=`Hurrah...! "${player}" Won the gameðŸ•º`;
+    statusEl.textContent=`Congratulation...! "${player}" Won the game!;
     statusEl.style.color = "green"
-    restartBtnEl.textContent = "Play Again ðŸ˜‰"
+    restartBtnEl.textContent = "Play Again ?"
     running=false;
     // if the game is draw then this executes.
   }else if(!options.includes("")){
     statusEl.textContent=`Oops..! Game Draw..!`;
     statusEl.style.color = "red"
-    restartBtnEl.textContent = "Play Again ðŸ˜‰"
+    restartBtnEl.textContent = "Play Again ?"
     running=false;
     // else the player will change to continue the game.
   }else{
