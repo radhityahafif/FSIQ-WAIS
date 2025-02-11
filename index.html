@@ -152,213 +152,198 @@
     
     
 </head>
-<body class="bg-cyan-50 max-w-screen overflow-x-hidden">
+<body class="bg-cyan-50">
     <!-- Navbar -->
-    <nav class="fixed w-screen z-50">
-      <div class="backdrop-blur-md bg-white/30 border-b border-white/10 shadow-lg">
-          <div class="container mx-auto px-4">
-              <div class="flex items-center justify-between h-16 relative w-full">
-                  <!-- Logo -->
-                  <div class="flex items-center">
-                      <a href="#" class="flex items-center">
-                          <img src="assets/images/sun.png" alt="FSIQ Logo" 
-                               class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-110">
-                      </a>
-                  </div>
-  
-                  <!-- Desktop Menu -->
-                  <div class="hidden md:flex flex-1 justify-center">
-                      <div class="flex items-center space-x-4 lg:space-x-8">
-                          <a href="#about" 
-                             class="text-sm lg:text-base text-white hover:text-cyan-200 transition-colors duration-300">
-                             About
-                          </a>
-                          <a href="#faq" 
-                             class="text-sm lg:text-base text-white hover:text-cyan-200 transition-colors duration-300">
-                             FAQ
-                          </a>
-                          <a href="#contact" 
-                             class="text-sm lg:text-base text-white hover:text-cyan-200 transition-colors duration-300">
-                             Contact
-                          </a>
-                      </div>
-                  </div>
-  
-                  <!-- Mobile Menu Button -->
-                  <div class="md:hidden">
-                      <button type="button" 
-                              class="text-white hover:text-cyan-200 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white" 
-                              id="mobile-menu-button"
-                              aria-expanded="false">
-                          <span class="sr-only">Open main menu</span>
-                          <svg class="h-6 w-6" 
-                               fill="none" 
-                               viewBox="0 0 24 24" 
-                               stroke="currentColor"
-                               aria-hidden="true">
-                              <path stroke-linecap="round" 
-                                    stroke-linejoin="round" 
-                                    stroke-width="2" 
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                          </svg>
-                      </button>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Mobile Menu -->
-          <div class="hidden md:hidden transition-all duration-300 ease-in-out" id="mobile-menu">
-              <div class="px-2 pt-2 pb-3 space-y-1 backdrop-blur-md bg-white/30">
-                  <a href="#about" 
-                     class="block px-3 py-2 text-base font-medium text-white hover:text-cyan-200 hover:bg-white/10 rounded-md transition-all duration-300">
-                     About
-                  </a>
-                  <a href="#faq" 
-                     class="block px-3 py-2 text-base font-medium text-white hover:text-cyan-200 hover:bg-white/10 rounded-md transition-all duration-300">
-                     FAQ
-                  </a>
-                  <a href="#contact" 
-                     class="block px-3 py-2 text-base font-medium text-white hover:text-cyan-200 hover:bg-white/10 rounded-md transition-all duration-300">
-                     Contact
-                  </a>
-              </div>
-          </div>
-      </div>
-  </nav>
-  
+    <nav class="fixed w-full z-50">
+    <div class="backdrop-blur-md bg-white/30 border-b border-white/10 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="assets/images/sun.png" alt="FSIQ Logo" class="w-10 h-10 filter brightness-110">
+                    </a>
+                </div>                
+                
+                
+                <!-- Center Menu -->
+                <div class="hidden md:flex flex-1 justify-center">
+                    <div class="flex items-center space-x-8">
+                        <a href="#about" class="text-white hover:text-cyan-200 transition-colors duration-300">About</a>
+                        <a href="#faq" class="text-white hover:text-cyan-200 transition-colors duration-300">FAQ</a>
+                        <a href="#contact" class="text-white hover:text-cyan-200 transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-white hover:text-cyan-200" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 backdrop-blur-md bg-white/30">
+                <a href="#about" class="block px-3 py-2 text-white hover:text-cyan-200">About</a>
+                <a href="#faq" class="block px-3 py-2 text-white hover:text-cyan-200">FAQ</a>
+                <a href="#contact" class="block px-3 py-2 text-white hover:text-cyan-200">Contact</a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
 
 
     <!-- Hero Section -->
-    <header class="header-interactive bg-gradient-to-b from-sky-400 via-blue-500 to-blue-600 text-white py-12 sm:py-16 md:py-20 relative">
-      <!-- Top Wave -->
-      <div class="absolute inset-0 z-0 wave-animate">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute top-0 w-full">
-              <path fill="rgba(165, 243, 252, 0.3)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,117.3C672,107,768,117,864,138.7C960,160,1056,192,1152,192C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-          </svg>
-      </div>
-  
-      <!-- Palm Trees Left -->
-      <div class="absolute left-0 bottom-0 z-10 transform -scale-x-100">
-          <img src="assets/images/coconut-tree.png" alt="Palm Tree" class="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 opacity-80">
-      </div>
-  
-      <!-- Palm Trees Right -->
-      <div class="absolute right-0 bottom-0 z-10">
-          <img src="assets/images/palm-tree.png" alt="Palm Tree" class="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 opacity-80">
-      </div>
-  
-      <!-- Beach Tent Left -->
-      <div class="absolute left-4 sm:left-10 md:left-20 lg:left-40 bottom-8 z-10">
-          <img src="assets/images/surf-board.png" alt="Beach Tent" class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 opacity-80">
-      </div>
-  
-      <!-- Center Image -->
-      <div class="absolute left-1/2 bottom-8 z-10 transform -translate-x-1/2">
-          <img src="assets/images/sand.png" alt="Beach Chair" class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 opacity-80">
-      </div>
-  
-      <!-- Beach Tent Right -->
-      <div class="absolute right-4 sm:right-10 md:right-20 lg:right-40 bottom-8 z-10">
-          <img src="assets/images/surfboard.png" alt="Beach Tent" class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 opacity-80">
-      </div>
-  
-      <div class="container mx-auto px-4 text-center relative z-10">
-          <div class="flex flex-col items-center justify-center mt-4 sm:mt-8 mouse-parallax">
-              <div class="brain-animation mb-4 brain-hover" data-aos="zoom-in">
-                  <img src="https://cdn-icons-png.flaticon.com/512/2491/2491330.png" alt="Neuron Brain" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto filter-red" />
-              </div>
-              <div class="text-center mb-8 sm:mb-16 interactive-content">
-                  <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 text-white drop-shadow-lg interactive-title pulse" data-aos="fade-down">
-                      Skala Kecerdasan Wechsler Dewasa
-                  </h1>
-                  <p class="text-base sm:text-lg text-white drop-shadow-md subtitle-animation" data-aos="fade-up">
-                      Temukan Kemampuan Kognitif Anda
-                  </p>
-              </div>
-          </div>
-      </div>
-  
-      <!-- Bottom Wave (Sand Color) -->
-      <div class="absolute inset-0 z-0 wave-animate">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute bottom-0 w-full">
-              <path fill="rgb(253, 230, 138)" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,165.3C672,171,768,213,864,218.7C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
-      </div>
-  </header>
-  
+    <header class="header-interactive bg-gradient-to-b from-sky-400 via-blue-500 to-blue-600 text-white py-20 relative overflow-hidden">
+        <!-- Top Wave -->
+        <div class="absolute inset-0 z-0 wave-animate">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute top-0">
+                <path fill="rgba(165, 243, 252, 0.3)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,117.3C672,107,768,117,864,138.7C960,160,1056,192,1152,192C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
     
+        <!-- Palm Trees Left -->
+        <div class="absolute left-0 bottom-0 z-10 transform -scale-x-100">
+            <img src="assets/images/coconut-tree.png" alt="Palm Tree" class="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 opacity-80">
+        </div>
+
+        <!-- Palm Trees Right -->
+        <div class="absolute right-0 bottom-0 z-10">
+            <img src="assets/images/palm-tree.png" alt="Palm Tree" class="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 opacity-80">
+        </div>
+
+        <!-- Beach Tent Left -->
+        <div class="absolute left-10 md:left-20 lg:left-40 bottom-8 z-10">
+            <img src="assets/images/surf-board.png" alt="Beach Tent" class="w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 opacity-80">
+        </div>
+
+        <!-- Center Image -->
+        <div class="absolute left-1/2 bottom-8 z-10 transform -translate-x-1/2">
+            <img src="assets/images/sand.png" alt="Beach Chair" class="w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 opacity-80">
+        </div>
+
+        <!-- Beach Tent Right -->
+        <div class="absolute right-10 md:right-20 lg:right-40 bottom-8 z-10">
+            <img src="assets/images/surfboard.png" alt="Beach Tent" class="w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 opacity-80">
+        </div>
+
     
-    
-    <!-- About Section -->
-    <!-- About Section -->
-    <section id="about" class="bg-white py-8 sm:py-12 md:py-16">
-      <div class="container mx-auto px-4">
-          <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12" data-aos="fade-up">Tentang FSIQ</h2>
-  
-          <div class="flex flex-wrap -mx-4">
-              <!-- About Image/Graphic -->
-              <div class="w-full md:w-2/5 px-4 mb-8 md:mb-0" data-aos="fade-right" data-aos-delay="300">
-                <img src="assets/images/iq.png" alt="Tentang FSIQ" class="rounded-lg shadow-lg w-3/4 mx-auto h-auto">
+        <div class="container mx-auto text-center relative z-10">
+            <!-- Existing content -->
+            <div class="flex flex-col items-center justify-center mt-8 mouse-parallax">
+                <div class="brain-animation mb-4 brain-hover" data-aos="zoom-in">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2491/2491330.png" alt="Neuron Brain" class="w-32 h-32 mx-auto filter-red" />
+                </div>
+                <div class="text-center mb-16 interactive-content">
+                    <h1 class="text-4xl font-bold mb-3 text-white drop-shadow-lg interactive-title pulse" data-aos="fade-down">
+                        Skala Kecerdasan Wechsler Dewasa
+                    </h1>
+                    <p class="text-lg text-white drop-shadow-md subtitle-animation" data-aos="fade-up">
+                        Temukan Kemampuan Kognitif Anda
+                    </p>
+                </div>
             </div>
-            
-  
+        </div>
+    
+        <!-- Bottom Wave (Sand Color) -->
+        <div class="absolute inset-0 z-0 wave-animate">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute bottom-0">
+                <path fill="rgb(253, 230, 138)" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,165.3C672,171,768,213,864,218.7C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+    
+    
+    
+    <!-- About Section -->
+    <!-- About Section -->
+    <section id="about" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Tentang FSIQ</h2>
+    
+            <div class="flex flex-wrap">
+              <!-- About Image/Graphic -->
+              <div class="md:w-1/2" data-aos="fade-right" data-aos-delay="300">
+                <img src="assets/images/iq.png" alt="Tentang FSIQ" class="rounded-lg shadow-lg">
+              </div>
+        
               <!-- About Text Content -->
-              <div class="w-full md:w-1/2 px-4" data-aos="fade-left" data-aos-delay="600">
-                  <p class="text-base sm:text-lg text-gray-600">
-                      FSIQ (Full Scale Intelligence Quotient) pada Wechsler Adult Intelligence Scale (WAIS) adalah ukuran yang digunakan untuk menilai kecerdasan dan kemampuan kognitif seseorang. Tes ini meliputi berbagai subtes yang mengukur kemampuan berbeda, termasuk:
-                  </p>
-                  <ul class="list-disc pl-5 mt-4 text-gray-600 text-base sm:text-lg">
-                      <li>Kemampuan verbal, seperti pemahaman kata dan aritmatika.</li>
-                      <li>Kemampuan performa, seperti puzzle visual dan organisasi blok.</li>
-                      <li>Memori kerja dan kecepatan pemrosesan informasi.</li>
-                  </ul>
-                  <p class="mt-4 text-base sm:text-lg text-gray-600">
-                      Skor FSIQ dihasilkan dari kombinasi berbagai subtes ini dan memberikan perkiraan kemampuan kognitif umum seseorang.
-                  </p>
+              <div class="md:w-1/2 px-6" data-aos="fade-left" data-aos-delay="600">
+                <p class="text-lg text-gray-600">
+                  FSIQ (Full Scale Intelligence Quotient) pada Wechsler Adult Intelligence Scale (WAIS)  adalah ukuran yang digunakan untuk menilai kecerdasan dan kemampuan kognitif seseorang. Tes ini meliputi berbagai subtes yang mengukur kemampuan berbeda, termasuk:
+                </p>
+                <ul class="list-disc pl-5 mt-4 text-gray-600">
+                  <li>Kemampuan verbal, seperti pemahaman kata dan aritmatika.</li>
+                  <li>Kemampuan performa, seperti puzzle visual dan organisasi blok.</li>
+                  <li>Memori kerja dan kecepatan pemrosesan informasi.</li>
+                </ul>
+                <p class="mt-4 text-gray-600">
+                  Skor FSIQ dihasilkan dari kombinasi berbagai subtes ini dan memberikan perkiraan kemampuan kognitif umum seseorang.
+                </p>
               </div>
-          </div>
-  
+            </div>
+      
           <!-- Timeline Section -->
-          <div class="mt-8 sm:mt-12" data-aos="fade-up" data-aos-delay="600">
-              <h3 class="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Timeline Perkembangan FSIQ</h3>
-              <div class="flex flex-col md:flex-row md:justify-center">
-                  <div class="relative">
-                      <!-- Mobile Timeline Line -->
-                      <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-cyan-600 md:transform md:-translate-x-1/2"></div>
-  
-                      <!-- Timeline Items -->
-                      <!-- 1939 -->
-                      <div class="mb-8 flex flex-col md:flex-row md:justify-between items-start md:items-center w-full" data-aos="fade-right" data-aos-delay="700">
-                          <div class="hidden md:block md:w-5/12"></div>
-                          <div class="ml-12 md:ml-0 pl-8 md:pl-0 relative md:w-5/12">
-                              <div class="absolute left-0 md:left-[-35px] top-0 w-4 h-4 bg-cyan-600 rounded-full"></div>
-                              <div class="z-20 p-4 bg-cyan-600 shadow-xl rounded-lg text-white">
-                                  <h4 class="mb-2 font-bold text-base sm:text-lg">1939 – Wechsler-Bellevue Intelligence Scale</h4>
-                                  <p class="text-sm">Versi awal yang dikembangkan oleh David Wechsler untuk mengukur kecerdasan orang dewasa.</p>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- 1955 -->
-                      <div class="mb-8 flex flex-col md:flex-row-reverse md:justify-between items-start md:items-center w-full" data-aos="fade-left" data-aos-delay="800">
-                          <div class="hidden md:block md:w-5/12"></div>
-                          <div class="ml-12 md:ml-0 pl-8 md:pl-0 relative md:w-5/12">
-                              <div class="absolute left-0 md:left-[-35px] top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
-                              <div class="z-20 p-4 bg-blue-500 shadow-xl rounded-lg text-white">
-                                  <h4 class="mb-2 font-bold text-base sm:text-lg">1955 – WAIS (WAIS-I)</h4>
-                                  <p class="text-sm">Versi pertama Wechsler Adult Intelligence Scale (WAIS) diterbitkan.</p>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- Continue the pattern for other timeline items -->
-                      <!-- Add similar structures for 1981, 1997, and 2008 entries -->
+          <div class="mt-12" data-aos="fade-up" data-aos-delay="600">
+            <h3 class="text-2xl font-bold text-center mb-8">Timeline Perkembangan FSIQ</h3>
+            <div class="flex flex-col md:flex-row md:justify-center">
+              <div class="relative">
+                <!-- Vertical line for the timeline -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 border border-cyan-600 h-full"></div>
+      
+                <!-- Timeline Item 1 -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-right" data-aos-delay="700">
+                  <div class="order-1 w-5/12"></div>
+                  <div class="z-20 p-4 bg-cyan-600 shadow-xl rounded-lg text-white w-5/12 ml-12">
+                    <h4 class="mb-3 font-bold">1939 – Wechsler-Bellevue Intelligence Scale</h4>
+                    <p class="text-sm leading-snug">Versi awal yang dikembangkan oleh David Wechsler untuk mengukur kecerdasan orang dewasa.</p>
                   </div>
+                </div>
+      
+                <!-- Timeline Item 2 -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline" data-aos="fade-left" data-aos-delay="800">
+                  <div class="order-1 w-5/12"></div>
+                  <div class="z-20 p-4 bg-blue-500 shadow-xl rounded-lg text-white w-5/12 mr-12">
+                    <h4 class="mb-3 font-bold">1955 – WAIS (WAIS-I)</h4>
+                    <p class="text-sm leading-snug">Versi pertama Wechsler Adult Intelligence Scale (WAIS) diterbitkan.</p>
+                  </div>
+                </div>
+
+                <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-right" data-aos-delay="700">
+                  <div class="order-1 w-5/12"></div>
+                  <div class="z-20 p-4 bg-cyan-600 shadow-xl rounded-lg text-white w-5/12 ml-12">
+                    <h4 class="mb-3 font-bold">1981 – WAIS-R (WAIS-Revised)</h4>
+                    <p class="text-sm leading-snug">Revisi pertama WAIS, dengan perbaikan dalam metode pengukuran.</p>
+                  </div>
+                </div>
+
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline" data-aos="fade-left" data-aos-delay="800">
+                  <div class="order-1 w-5/12"></div>
+                  <div class="z-20 p-4 bg-blue-500 shadow-xl rounded-lg text-white w-5/12 mr-12">
+                    <h4 class="mb-3 font-bold">1997 – WAIS-III</h4>
+                    <p class="text-sm leading-snug">Menambahkan lebih banyak subtes dan menyesuaikan skor berdasarkan faktor usia.</p>
+                  </div>
+                </div>
+
+                <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-right" data-aos-delay="700">
+                  <div class="order-1 w-5/12"></div>
+                  <div class="z-20 p-4 bg-cyan-600 shadow-xl rounded-lg text-white w-5/12 ml-12">
+                    <h4 class="mb-3 font-bold">2008 – WAIS-IV (versi terbaru)</h4>
+                    <p class="text-sm leading-snug">Menghapus beberapa subtes dan memperkenalkan index scores, seperti WMI, PSI, FRI, VSI, dan GAI untuk memberikan pemahaman yang lebih luas tentang kecerdasan individu.</p>
+                  </div>
+                </div>
+      
+                <!-- Additional timeline items here... -->
               </div>
+            </div>
           </div>
-      </div>
-  </section>
-  
+        </div>
+      </section>
 
     
     
@@ -367,210 +352,162 @@
     
 
     <!-- FSIQ Components Section -->
-    <section class="py-8 sm:py-12 md:py-16">
-      <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
-              <!-- Card 1 -->
-              <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300" data-aos="flip-left">
-                  <h3 class="text-xl sm:text-2xl font-bold text-cyan-600 mb-3 sm:mb-4">Working Memory Index (WMI)</h3>
-                  <p class="text-sm sm:text-base mb-4">Mengukur kemampuan seseorang dalam menyimpan dan memanipulasi informasi dalam waktu singkat. Contoh subtes: Digit Span, Arithmetic.</p>
-              </div>
-  
-              <!-- Card 2 -->
-              <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300" data-aos="flip-right">
-                  <h3 class="text-xl sm:text-2xl font-bold text-cyan-600 mb-3 sm:mb-4">General Ability Index (GAI)</h3>
-                  <p class="text-sm sm:text-base mb-4">Kombinasi dari VSI dan FRI, memberikan gambaran tentang kemampuan intelektual utama tanpa mempertimbangkan WMI dan PSI.</p>
-              </div>
-  
-              <!-- Card 3 -->
-              <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300" data-aos="zoom-in">
-                  <h3 class="text-xl sm:text-2xl font-bold text-cyan-600 mb-3 sm:mb-4">Fluid Reasoning Index (FRI)</h3>
-                  <p class="text-sm sm:text-base mb-4">Mengukur kemampuan berpikir logis, memecahkan masalah, dan mengenali pola hubungan antara konsep yang kompleks. Contoh subtes: Matrix Reasoning, Figure Weights.</p>
-              </div>
-  
-              <!-- Card 4 -->
-              <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up-right">
-                  <h3 class="text-xl sm:text-2xl font-bold text-cyan-600 mb-3 sm:mb-4">Visual-Spatial Index (VSI)</h3>
-                  <p class="text-sm sm:text-base mb-4">Mengukur kemampuan dalam memahami hubungan spasial dan memanipulasi bentuk visual. Contoh subtes: Block Design, Visual Puzzles.</p>
-              </div>
-  
-              <!-- Card 5 -->
-              <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up-left">
-                  <h3 class="text-xl sm:text-2xl font-bold text-cyan-600 mb-3 sm:mb-4">Processing Speed Index (PSI)</h3>
-                  <p class="text-sm sm:text-base mb-4">Mengukur seberapa cepat seseorang dapat memproses informasi sederhana dan melakukan tugas kognitif secara efisien. Contoh subtes: Symbol Search, Coding.</p>
-              </div>
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6" data-aos="flip-left">
+              <h3 class="text-2xl font-bold text-cyan-600 mb-4">Working Memory Index (WMI)</h3>
+              <p class="mb-4">Mengukur kemampuan seseorang dalam menyimpan dan memanipulasi informasi dalam waktu singkat.
+                Contoh subtes: Digit Span, Arithmetic.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6" data-aos="flip-right">
+              <h3 class="text-2xl font-bold text-cyan-600 mb-4">General Ability Index (GAI)</h3>
+              <p class="mb-4">Kombinasi dari VSI dan FRI, memberikan gambaran tentang kemampuan intelektual utama tanpa mempertimbangkan WMI dan PSI.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6" data-aos="zoom-in">
+              <h3 class="text-2xl font-bold text-cyan-600 mb-4">Fluid Reasoning Index (FRI)</h3>
+              <p class="mb-4">Mengukur kemampuan berpikir logis, memecahkan masalah, dan mengenali pola hubungan antara konsep yang kompleks.
+                Contoh subtes: Matrix Reasoning, Figure Weights.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-up-right">
+              <h3 class="text-2xl font-bold text-cyan-600 mb-4">Visual-Spatial Index (VSI)</h3>
+              <p class="mb-4">Mengukur kemampuan dalam memahami hubungan spasial dan memanipulasi bentuk visual.
+                Contoh subtes: Block Design, Visual Puzzles.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-up-left">
+              <h3 class="text-2xl font-bold text-cyan-600 mb-4">Processing Speed Index (PSI)</h3>
+              <p class="mb-4">Mengukur seberapa cepat seseorang dapat memproses informasi sederhana dan melakukan tugas kognitif secara efisien.
+                Contoh subtes: Symbol Search, Coding.</p>
+            </div>
           </div>
-      </div>
-  </section>
-  
-
-  <section id="faq" class="bg-cyan-100 py-8 sm:py-12 md:py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">FAQ</h2>
-        <div class="max-w-3xl mx-auto" id="accordion">
-            <!-- FAQ Item 1 -->
-            <div class="mb-3 border border-gray-300 rounded shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full text-left bg-white p-4 rounded flex justify-between items-center font-semibold text-sm sm:text-base" onclick="toggleDropdown('dropdown1', this)">
-                    Apa itu WAIS dan bagaimana cara kerjanya?
-                    <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-                </button>
-                <div id="dropdown1" class="hidden bg-white transition-all duration-300 ease-in-out">
-                    <div class="p-4 text-sm sm:text-base text-gray-700">
-                        WAIS adalah tes IQ yang dirancang untuk menilai berbagai aspek kecerdasan orang dewasa melalui serangkaian subtes yang mengukur kemampuan kognitif, termasuk pemecahan masalah, daya ingat, kecepatan berpikir, dan pemahaman verbal.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Item 2 -->
-            <div class="mb-3 border border-gray-300 rounded shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full text-left bg-white p-4 rounded flex justify-between items-center font-semibold text-sm sm:text-base" onclick="toggleDropdown('dropdown2', this)">
-                    Berapa rentang skor dalam WAIS-IV?
-                    <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-                </button>
-                <div id="dropdown2" class="hidden bg-white transition-all duration-300 ease-in-out">
-                    <div class="p-4 text-sm sm:text-base text-gray-700">
-                        <p class="mb-2">Skor rata-rata WAIS-IV adalah 100, dengan standar deviasi 15.</p>
-                        <p class="mb-2">Rentang skor:</p>
-                        <ul class="space-y-1 list-inside">
-                            <li>130+ = Sangat Superior</li>
-                            <li>120-129 = Superior</li>
-                            <li>110-119 = Di atas rata-rata</li>
-                            <li>90-109 = Rata-rata</li>
-                            <li>80-89 = Di bawah rata-rata</li>
-                            <li>70-79 = Borderline</li>
-                            <li>&lt;70 = Defisit intelektual</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Item 3 -->
-            <div class="mb-3 border border-gray-300 rounded shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full text-left bg-white p-4 rounded flex justify-between items-center font-semibold text-sm sm:text-base" onclick="toggleDropdown('dropdown3', this)">
-                    Apakah hasil WAIS bisa berubah seiring waktu?
-                    <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-                </button>
-                <div id="dropdown3" class="hidden bg-white transition-all duration-300 ease-in-out">
-                    <div class="p-4 text-sm sm:text-base text-gray-700">
-                        Ya, faktor seperti pengalaman belajar, kondisi kesehatan, dan latihan kognitif dapat mempengaruhi skor IQ seseorang dalam jangka panjang.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Item 4 -->
-            <div class="mb-3 border border-gray-300 rounded shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full text-left bg-white p-4 rounded flex justify-between items-center font-semibold text-sm sm:text-base" onclick="toggleDropdown('dropdown4', this)">
-                    Siapa yang biasanya menjalani tes WAIS?
-                    <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-                </button>
-                <div id="dropdown4" class="hidden bg-white transition-all duration-300 ease-in-out">
-                    <div class="p-4 text-sm sm:text-base text-gray-700">
-                        Tes WAIS sering digunakan oleh psikolog untuk menilai individu dalam konteks akademik, klinis, atau profesional, seperti untuk diagnosis gangguan belajar, gangguan neuropsikologis, atau evaluasi kemampuan kerja.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Item 5 -->
-            <div class="mb-3 border border-gray-300 rounded shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full text-left bg-white p-4 rounded flex justify-between items-center font-semibold text-sm sm:text-base" onclick="toggleDropdown('dropdown5', this)">
-                    Apakah ada versi terbaru setelah WAIS-IV?
-                    <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-                </button>
-                <div id="dropdown5" class="hidden bg-white transition-all duration-300 ease-in-out">
-                    <div class="p-4 text-sm sm:text-base text-gray-700">
-                        Hingga saat ini, WAIS-IV (2008) masih menjadi standar. Namun, versi WAIS yang lebih baru kemungkinan akan dikembangkan di masa depan untuk menyesuaikan dengan perubahan teknologi dan penelitian terbaru dalam psikologi kognitif.
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-</section>
+      </section>
 
+      <section id="faq" class="bg-cyan-100 py-16">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12">FAQ</h2>
+          <div class="sm:mx-0 lg:mx-8" id="accordion">
+            <!-- FAQ Item -->
+            <div class="mb-1 border border-gray-300 rounded lg:mt-2 max-sm:mt-2 md:m-4 max-sm:p-1 max-sm:mx-1">
+              <button class="w-full text-left bg-white p-2 rounded flex justify-between items-center font-semibold" onclick="toggleDropdown('dropdown1', this)">
+                Apa itu WAIS dan bagaimana cara kerjanya?
+                <i id="icon2" class="fas fa-chevron-down ml-2 text-sm mt-1.5 transition-transform duration-300"></i>
+              </button>
+              <div id="dropdown1" class="hidden p-2 bg-white transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+                <p class="text-gray-700 block text-sm" role="menuitem">
+                  WAIS adalah tes IQ yang dirancang untuk menilai berbagai aspek kecerdasan orang dewasa melalui serangkaian subtes yang mengukur kemampuan kognitif, termasuk pemecahan masalah, daya ingat, kecepatan berpikir, dan pemahaman verbal.
+                </p>
+              </div>
+            </div>
+            <!-- ... other FAQ items ... -->
+            <div class="mb-1 border border-gray-300 rounded lg:mt-2 max-sm:mt-2 md:m-4 max-sm:p-1 max-sm:mx-1">
+              <button class="w-full text-left bg-white p-2 rounded flex justify-between items-center font-semibold" onclick="toggleDropdown('dropdown2', this)">
+                Berapa rentang skor dalam WAIS-IV?
+                <i id="icon2" class="fas fa-chevron-down ml-2 text-sm mt-1.5 transition-transform duration-300"></i>
+              </button>
+              <div id="dropdown2" class="hidden p-2 bg-white transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+                <p class="text-gray-700 block text-sm" role="menuitem">
+                  <p>Skor rata-rata WAIS-IV adalah 100, dengan standar deviasi 15.</p>
+                  <p>Rentang skor:</p>
+                  <ul>
+                      <li>130+ = Sangat Superior</li>
+                      <li>120-129 = Superior</li>
+                      <li>110-119 = Di atas rata-rata</li>
+                      <li>90-109 = Rata-rata</li>
+                      <li>80-89 = Di bawah rata-rata</li>
+                      <li>70-79 = Borderline</li>
+                      <li>&lt;70 = Defisit intelektual</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div class="mb-1 border border-gray-300 rounded lg:mt-2 max-sm:mt-2 md:m-4 max-sm:p-1 max-sm:mx-1">
+              <button class="w-full text-left bg-white p-2 rounded flex justify-between items-center font-semibold" onclick="toggleDropdown('dropdown3', this)">
+                Apakah hasil WAIS bisa berubah seiring waktu?
+                <i id="icon2" class="fas fa-chevron-down ml-2 text-sm mt-1.5 transition-transform duration-300"></i>
+              </button>
+              <div id="dropdown3" class="hidden p-2 bg-white transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+                <p class="text-gray-700 block text-sm" role="menuitem">
+                  Ya, faktor seperti pengalaman belajar, kondisi kesehatan, dan latihan kognitif dapat mempengaruhi skor IQ seseorang dalam jangka panjang.
+                </p>
+              </div>
+            </div>
+            <div class="mb-1 border border-gray-300 rounded lg:mt-2 max-sm:mt-2 md:m-4 max-sm:p-1 max-sm:mx-1">
+              <button class="w-full text-left bg-white p-2 rounded flex justify-between items-center font-semibold" onclick="toggleDropdown('dropdown4', this)">
+                Siapa yang biasanya menjalani tes WAIS?
+                <i id="icon2" class="fas fa-chevron-down ml-2 text-sm mt-1.5 transition-transform duration-300"></i>
+              </button>
+              <div id="dropdown4" class="hidden p-2 bg-white transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+                <p class="text-gray-700 block text-sm" role="menuitem">
+                  Tes WAIS sering digunakan oleh psikolog untuk menilai individu dalam konteks akademik, klinis, atau profesional, seperti untuk diagnosis gangguan belajar, gangguan neuropsikologis, atau evaluasi kemampuan kerja.
+                </p>
+              </div>
+            </div>
+            <div class="mb-1 border border-gray-300 rounded lg:mt-2 max-sm:mt-2 md:m-4 max-sm:p-1 max-sm:mx-1">
+              <button class="w-full text-left bg-white p-2 rounded flex justify-between items-center font-semibold" onclick="toggleDropdown('dropdown5', this)">
+                Apakah ada versi terbaru setelah WAIS-IV?
+                <i id="icon2" class="fas fa-chevron-down ml-2 text-sm mt-1.5 transition-transform duration-300"></i>
+              </button>
+              <div id="dropdown5" class="hidden p-2 bg-white transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+                <p class="text-gray-700 block text-sm" role="menuitem">
+                  Hingga saat ini, WAIS-IV (2008) masih menjadi standar. Namun, versi WAIS yang lebih baru kemungkinan akan dikembangkan di masa depan untuk menyesuaikan dengan perubahan teknologi dan penelitian terbaru dalam psikologi kognitif.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <!-- Games Section -->
-    <section class="bg-cyan-100 py-8 sm:py-12 md:py-16">
-      <div class="container mx-auto px-4">
-          <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Latih Kecerdasan Anda</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-              <!-- Memory Card Game -->
-              <a href="memorycard.html" class="game-card bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                  <img src="https://cdn-icons-png.flaticon.com/512/2214/2214764.png" alt="Permainan Kartu Memori" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4">
-                  <h3 class="text-lg sm:text-xl font-bold text-cyan-600 text-center">Kartu Memori</h3>
-              </a>
-  
-              <!-- Quiz Game -->
-              <a href="quiz.html" class="game-card bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                  <img src="https://cdn-icons-png.flaticon.com/512/5726/5726470.png" alt="Permainan Kuis" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4">
-                  <h3 class="text-lg sm:text-xl font-bold text-cyan-600 text-center">Kuis</h3>
-              </a>
-  
-              <!-- Tic Tac Toe Game -->
-              <a href="tictactoe.html" class="game-card bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                  <img src="https://cdn-icons-png.flaticon.com/512/566/566294.png" alt="Tic Tac Toe" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4">
-                  <h3 class="text-lg sm:text-xl font-bold text-cyan-600 text-center">Tic Tac Toe</h3>
-              </a>
-  
-              <!-- Tower Block Game -->
-              <a href="towerblock.html" class="game-card bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
-                  <img src="https://cdn-icons-png.flaticon.com/512/2942/2942076.png" alt="Tower Block" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4">
-                  <h3 class="text-lg sm:text-xl font-bold text-cyan-600 text-center">Tower Block</h3>
-              </a>
-  
-              <!-- Typing Test Game -->
-              <a href="typing.html" class="game-card bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
-                  <img src="https://cdn-icons-png.flaticon.com/512/2535/2535557.png" alt="Tes Mengetik" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4">
-                  <h3 class="text-lg sm:text-xl font-bold text-cyan-600 text-center">Tes Mengetik</h3>
-              </a>
-          </div>
-      </div>
-  </section>
-  
+    <section class="bg-cyan-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Latih Kecerdasan Anda</h2>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <a href="memorycard.html" class="game-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2214/2214764.png" alt="Permainan Kartu Memori" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-cyan-600">Kartu Memori</h3>
+                </a>
+                
+                <a href="quiz.html" class="game-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5726/5726470.png" alt="Permainan Kuis" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-cyan-600">Kuis</h3>
+                </a>
+                
+                <a href="tictactoe.html" class="game-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://cdn-icons-png.flaticon.com/512/566/566294.png" alt="Tic Tac Toe" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-cyan-600">Tic Tac Toe</h3>
+                </a>
+                
+                <a href="towerblock.html" class="game-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2942/2942076.png" alt="Tower Block" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-cyan-600">Tower Block</h3>
+                </a>
+                
+                <a href="typing.html" class="game-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2535/2535557.png" alt="Tes Mengetik" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-cyan-600">Tes Mengetik</h3>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-white py-8 sm:py-12 md:py-16">
+    <section id="contact" class="bg-white py-16">
       <div class="container mx-auto px-4">
-          <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Kontak</h2>
-          <form action="#" method="POST" class="max-w-xl mx-auto space-y-4 sm:space-y-6">
-              <div class="group">
-                  <input 
-                      type="text" 
-                      name="name" 
-                      placeholder="Nama Anda" 
-                      class="w-full bg-gray-100 p-3 sm:p-4 rounded-lg border border-transparent focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 focus:outline-none transition-all duration-300 text-sm sm:text-base" 
-                      required
-                  />
-              </div>
-  
-              <div class="group">
-                  <input 
-                      type="email" 
-                      name="email" 
-                      placeholder="Email Anda" 
-                      class="w-full bg-gray-100 p-3 sm:p-4 rounded-lg border border-transparent focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 focus:outline-none transition-all duration-300 text-sm sm:text-base" 
-                      required
-                  />
-              </div>
-  
-              <div class="group">
-                  <textarea 
-                      name="message" 
-                      rows="5" 
-                      placeholder="Pesan Anda" 
-                      class="w-full bg-gray-100 p-3 sm:p-4 rounded-lg border border-transparent focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 focus:outline-none transition-all duration-300 text-sm sm:text-base resize-none" 
-                      required
-                  ></textarea>
-              </div>
-  
-              <button 
-                  type="submit" 
-                  class="w-full bg-cyan-500 text-white px-6 py-3 sm:py-4 rounded-lg hover:bg-cyan-600 active:bg-cyan-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg text-sm sm:text-base font-medium"
-              >
-                  Kirim Pesan
-              </button>
+          <h2 class="text-3xl font-bold text-center mb-12">Kontak</h2>
+          <form action="#" method="POST" class="max-w-xl mx-auto">
+              <input type="text" name="name" placeholder="Nama Anda" class="w-full bg-gray-100 p-4 rounded mb-4" required/>
+              <input type="email" name="email" placeholder="Email Anda" class="w-full bg-gray-100 p-4 rounded mb-4" required/>
+              <textarea name="message" rows="5" placeholder="Pesan Anda" class="w-full bg-gray-100 p-4 rounded mb-4" required></textarea>
+              <button type="submit" class="w-full bg-cyan-500 text-white px-6 py-2 rounded hover:bg-cyan-600 transition duration-300 transform hover:scale-105">Kirim Pesan</button>
           </form>
       </div>
   </section>
-  
   
 
     <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 transition-opacity duration-300">
@@ -591,55 +528,49 @@
     </div>
 
     <footer class="bg-sky-600 text-white">
-      <div class="container mx-auto px-4 py-8">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-              <!-- Footer Links Column -->
-              <div class="text-center md:text-left">
-                  <h5 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Links</h5>
-                  <ul class="space-y-3">
-                      <li>
-                          <a href="#about" class="inline-block border-b-2 border-transparent hover:border-white transition-all duration-300 text-sm sm:text-base">
-                              About Us
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#contact" class="inline-block border-b-2 border-transparent hover:border-white transition-all duration-300 text-sm sm:text-base">
-                              Contact
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#faq" class="inline-block border-b-2 border-transparent hover:border-white transition-all duration-300 text-sm sm:text-base">
-                              FAQ
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-  
-              <!-- Social Media Column -->
-              <div class="text-center md:text-left">
-                  <h5 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Follow Us</h5>
-                  <div class="flex items-center justify-center md:justify-start space-x-6">
-                      <a href="#" class="hover:text-sky-200 transition-all duration-300 transform hover:-translate-y-1">
-                          <i class="fab fa-facebook-f text-xl"></i>
-                      </a>
-                      <a href="#" class="hover:text-sky-200 transition-all duration-300 transform hover:-translate-y-1">
-                          <i class="fab fa-twitter text-xl"></i>
-                      </a>
-                      <a href="#" class="hover:text-sky-200 transition-all duration-300 transform hover:-translate-y-1">
-                          <i class="fab fa-instagram text-xl"></i>
-                      </a>
-                  </div>
-              </div>
+        <div class="container mx-auto px-4 py-8">
+          <div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
+            <!-- Footer Left Column for Links or Navigation -->
+            <div class="px-4 sm:w-1/2 md:w-1/4 text-center md:text-left">
+              <h5 class="text-xl font-bold mb-6">Links</h5>
+              <ul class="list-none footer-links">
+                <li class="mb-2">
+                  <a href="#about" class="border-b border-transparent hover:border-white transition-colors duration-300">About Us</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#contact" class="border-b border-transparent hover:border-white transition-colors duration-300">Contact</a>
+                </li>
+                <li>
+                  <a href="#faq" class="border-b border-transparent hover:border-white transition-colors duration-300">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <!-- ... Other columns ... -->
+      
+            <!-- Footer Right Column for Social Icons -->
+            <div class="px-4 sm:w-1/2 md:w-1/4 mt-8 sm:mt-0 text-center">
+              <h5 class="text-xl font-bold mb-6">Follow Us</h5>
+              <div class="flex items-center justify-center">
+                <a href="#" class="hover:text-sky-200 transition-colors duration-300 mr-6">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="hover:text-sky-200 transition-colors duration-300 mr-6">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="hover:text-sky-200 transition-colors duration-300 mr-6">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>  
+            </div>
           </div>
-  
-          <!-- Copyright Section -->
-          <div class="pt-8 mt-8 text-center border-t border-sky-300/30">
-              <p class="text-sm sm:text-base">© 2025 LingkaranKoding. All Rights Reserved.</p>
-              <p class="text-xs sm:text-sm mt-2 text-sky-200">Designed by Radhitya Hafif</p>
+      
+          <!-- Bottom Footer for Copy Rights -->
+          <div class="pt-8 mt-8 text-center border-t border-sky-300">
+            <p>© 2025 LingkaranKoding. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Designed by Radhitya Hafif</p>
           </div>
-      </div>
-  </footer>
-  
+        </div>
+      </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
